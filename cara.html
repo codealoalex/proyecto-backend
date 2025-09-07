@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holi</title>
+</head>
+<body>
+    <h1>Hola mundo</h1>
+    <form action="http://localhost:10000/api/usuario/registrar" method="post">
+        <input type="text" name="id">
+        <input type="text" name="nombre">
+        <input type="text" name="paterno">
+        <input type="text" name="materno">
+        <input type="date" name="fecha">
+        <input type="email" name="correo">
+        <input type="number" name="contacto">
+        <input type="text" name="clave">
+        <select name="tipo">
+            <option value="residente">Residente</option>
+            <option value="administrador">Administrador</option>
+        </select>
+        <button>Registrar</button>
+    </form>
+</body>
+</html>
