@@ -1,0 +1,3 @@
+600: no hay correo
+700: no hay contacto
+800: no hay clave

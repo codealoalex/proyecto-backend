@@ -1,9 +1,12 @@
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import { loginUser } from "../controller/login-controller/login.controller.js";
+
 import { FRONT_PORT } from "../helpers/config.js";
-import { noToken } from "../helpers/verificarTokenAdmin.js";
+import { verificarTokenResidente } from "../helpers/verificarTokenAdmin.js";
+import { ResidenteController } from "../controller/residente.controller.js";
+
+const Residente = new ResidenteController();
 export const router = express.Router();
 
 const corsOptions = {
@@ -16,4 +19,4 @@ const corsOptions = {
 router.use(cookieParser());
 router.use(cors(corsOptions));
 
-router.post("/login", loginUser); //Seria interesante añadir un middleware que valide la existencia de token con noToken
+router.get("/datos-residente", verificarTokenResidente, Residente.obtenerDatosResidente);

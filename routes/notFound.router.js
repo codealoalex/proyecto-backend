@@ -1,9 +1,7 @@
 import express from "express";
 import cors from "cors";
-import cookieParser from "cookie-parser";
-import { loginUser } from "../controller/login-controller/login.controller.js";
 import { FRONT_PORT } from "../helpers/config.js";
-import { noToken } from "../helpers/verificarTokenAdmin.js";
+
 export const router = express.Router();
 
 const corsOptions = {
@@ -13,7 +11,16 @@ const corsOptions = {
   credentials: true,
 };
 
-router.use(cookieParser());
 router.use(cors(corsOptions));
 
-router.post("/login", loginUser); //Seria interesante añadir un middleware que valide la existencia de token con noToken
+const notFound = (req, res) => {
+  res.status(404).json({
+    message: "La pagina con el servicio no existe",
+  });
+};
+
+router.post("/{*ruta}", notFound);
+router.get("/{*ruta}", notFound);
+router.delete("/{*ruta}", notFound);
+router.put("/{*ruta}", notFound);
+router.patch("/{*ruta}", notFound);
