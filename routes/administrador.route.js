@@ -22,7 +22,7 @@ router.use(cors(corsOptions));
 
 router.get('/obtener-residentes', verificarTokenAdmin, Administrador.obtenerUsuariosResidentes);
 router.get('/obtener-residente', verificarTokenAdmin, Administrador.obtenerUsuarioResidente);
-router.post("/registrar", verificarTokenAdmin, (req, res) =>
+router.post("/registrar-residente", verificarTokenAdmin, (req, res) =>
   Administrador.registrarUsuario(req, res)
 );
 router.put('/actualizar-residente', verificarTokenAdmin, Administrador.actualizarUsuarioResidente);
