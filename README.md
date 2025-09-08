@@ -37,15 +37,17 @@ Ya habiendose logueado, debe añadir los siguientes campos para adicionar nuevos
 
 ### Administrador
 *Importante: No es posible hacer ninguna de las siguientes acciones sin su token correspondiente, en este caso dicho token debe estar almaceanado en una cookie en el navegador*
-**api/admin/registrar-residente** endpoint para que un administrador pueda registrar nuevos residentes o administradores
-**api/admin/obtener-residentes** endpoint para que un administrador obtenga todos los residentes
-**api/admin/obtener-residente** endpoint para que un administrador obtenga un residente mediante su id 
-**api/admin/actualizar-residente** endpoint para que un administrador actualice los datos permitidos de un residente mediante su id (correo, fecha_nacimiento, contacto)
-**api/admin/eliminar-residente**  endpoint para que un administrador eliminar a un residente mediante su id
+
+* **api/admin/registrar-residente** endpoint para que un administrador pueda registrar nuevos residentes o administradores
+* **api/admin/obtener-residentes** endpoint para que un administrador obtenga todos los residentes
+* **api/admin/obtener-residente** endpoint para que un administrador obtenga un residente mediante su id
+* **api/admin/actualizar-residente** endpoint para que un administrador actualice los datos permitidos de un residente mediante su id (correo, fecha_nacimiento, contacto)
+* **api/admin/eliminar-residente**  endpoint para que un administrador eliminar a un residente mediante su id
 
 ### Residente
 *Importante: No es posible hacer ninguna de las siguientes acciones sin su token correspondiente, en este caso dicho token debe estar almaceanado en una cookie en el navegador*
-**api/residente/datos-residente**  endpoint para que un residente pueda obtener datos sobre si mismo y sobre su departamento
+
+* **api/residente/datos-residente**  endpoint para que un residente pueda obtener datos sobre si mismo y sobre su departamento
 
 ## Recomendaciones
 Debido a que se crearon cookies para una mejor "seguridad" al momento de la autenticacion, si se hacen las pruebas correspondientes
